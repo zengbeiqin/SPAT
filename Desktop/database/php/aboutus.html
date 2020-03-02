@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>SPAT</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Description" lang="en" content="ADD SITE DESCRIPTION">
+        <meta name="author" content="ADD AUTHOR INFORMATION">
+        <meta name="robots" content="index, follow">
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">-->
+    <!-- required for dropdown menu on navigation toolbar-->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+
+        <!-- Bootstrap Core CSS file -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Override CSS file - add your own CSS rules -->
+        <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+            <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <!--<div class="navbar-header">-->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="home.html"><b><font color=#0089A7>SPAT</font></b></a>
+                <!--</div> -->
+                <!-- /.navbar-header -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="home.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                    <li><a href="search.html"><span class="glyphicon glyphicon-search"></span> Search</a></li>
+                    <li><a href="aboutus.html">About us</a></li>
+                    <li><a href="help.html">Help</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </nav>
+ <!-- /.navbar -->
+<!-- Page Content -->
+<div class="container-fluid">
+    <div class="row">
+        <!-- Page content 1 -->
+        <div class="container">
+            <div class="col-md-12">
+                <br>
+                <div class="panel panel-primary">
+                    <br>
+                    <div class="panel-body">
+                        <p><font size="3" >SPAT is a free and public database containing small peptides encoded by small open reading frames(sORFs) of Arabidopsis thaliana. The database has been updated on February 13, 2020 and contains a comprehensive list of 8080 small peptides. Our current research at Jing Li lab, School of Life Sciences and Biotechnology, Shanghai Jiao Tong University focuses on the discovery of novel peptides. We are trying to figure out the correlation between small peptides and human cancer, plant development.</font></p>
+                        <p><font size="3" >236 small peptides in the database identified by our research. Their IDs start with “SPAT”. We predict small peptides from whole genome of Arabidopsis thaliana by six-frame translation and use MaxQuant to identify small peptides. Eight small peptides are picked to carry out PCR and gel electrophoresis and two of them are successfully verified.</font></p>
+                        <p><font size="3" >Small peptides can be classified as 5'UTR, 3'UTR, Coding Sequence overlap(CDS overlap), lncRNA , miRNA and other according to their position relationship of annotated genes of Arabidopsis thaliana (Fig 1). According to recent research, the chromosome location of sORFs and their position relationship of annotated genes may have connection with small peptides’ function, so position relationship is shown in our database.</font></p>
+                        <p style="text-align: center"><img src="static/images/figure1.png" style="text-align: center"></p>
+                        <p style="text-align: center">Fig.1 Position relationship of small peptides between annotated genes of Arabidopsis thaliana</p>
+                    </div>
+                </div>
+            </div>
+        </div>              
+    </div>
+</div> 
+<div align = "center" id="footer" class="footer">
+                    <p>Copyright &#169; <a href="http://cbb.sjtu.edu.cn/~jingli/">Jing Li's group</a>,
+                    SJTU. All rights reserved.</p>
+              </div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+            <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>SPAT</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Description" lang="en" content="ADD SITE DESCRIPTION">
+        <meta name="author" content="ADD AUTHOR INFORMATION">
+        <meta name="robots" content="index, follow">
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">-->
+    <!-- required for dropdown menu on navigation toolbar-->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+
+        <!-- Bootstrap Core CSS file -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="static/bootstrap-table/bootstrap-table.min.css" >
+        <!-- Override CSS file - add your own CSS rules -->
+        <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+            <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <!--<div class="navbar-header">-->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="home.html"><b><font color=#0089A7>SPAT</font></b></a>
+                <!--</div> -->
+                <!-- /.navbar-header -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="home.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                    <li><a href="search.html"><span class="glyphicon glyphicon-search"></span> Search</a></li>
+                    <li><a href="datasets.html">Datasets</a></li>
+                    <li><a href="aboutus.html">About us</a></li>
+                    <li><a href="help.html">Help</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </nav>
+ <!-- /.navbar -->
+<!-- Page Content -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <!-- Page content 1 -->
+            <h1><b><font color=#0089A7>Dataset</font></b></h1>
+            <div class="container" style="width:100%">
+                <table class="table table-striped table-bordered" style="table-layout:fixed;word-break:break-all; word-wrap:break-all;text-align: center">
+                <thead>　　　　　　　　　　　　　　　　
+                    <tr>　　　　
+                        <th style="width:30%;text-align: center">File Names</th>　　　　　　　
+                        <th style="width:60%;text-align: center">Description</th>
+                        <th style="width:10%;text-align: center">Downloads</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>At_sORF.fasta</td>
+                        <td>AtPeptides; peptide sequences by Liangquan Zhu, 2020</td>
+                        <td style="text-align: center"><button><a href="static/datasets/At_sORF.fasta" download=""><span class="glyphicon glyphicon-download-alt"></span></a></button></td>
+                    </tr>
+                    <tr>
+                        <td>SIPs_peptides.fasta</td>
+                        <td>SIPs; peptide sequences by Hazarikal et al, 2017</td>
+                        <td style="text-align: center"><button><a href="static/datasets/SIPs_peptides.fasta" download=""><span class="glyphicon glyphicon-download-alt"></span></a></button></td>
+                    </tr>
+                    <tr>
+                        <td>SIPs_nucl.fasta</td>
+                        <td>SIPs; nucleotide sequences by Hazarikal et al, 2017</td>
+                        <td style="text-align: center"><button><a href="static/datasets/SIPs_nucl.fasta" download=""><span class="glyphicon glyphicon-download-alt"></span></a></button></td>
+                    </tr>
+                    <tr>
+                        <td>sORFs_peptides.fasta</td>
+                        <td>sORFs; peptide sequences by Hanada et al, 2007,2013</td>
+                        <td style="text-align: center"><button><a href="static/datasets/sORFs_peptides.fasta" download=""><span class="glyphicon glyphicon-download-alt"></span></a></button></td>
+                    </tr>
+                    <tr>
+                        <td>sORFs_nucl.fasta</td>
+                        <td>sORFs; nucleotide sequences by Hanada et al, 2007,2013</td>
+                        <td style="text-align: center"><button><a href="static/datasets/sORFs_nucl.fasta" download=""><span class="glyphicon glyphicon-download-alt"></span></a></button></td>
+                    </tr>
+                    <tr>
+                        <td>LW_peptides.fasta</td>
+                        <td>SecretedPeptides; peptide sequences by Lease and Walker, 2006</td>
+                        <td style="text-align: center"><button><a href="static/datasets/LW_peptides.fasta" download=""><span class="glyphicon glyphicon-download-alt"></span></a></button></td>
+                    </tr>
+                    <tr>
+                        <td>LW_nucl.fasta</td>
+                        <td>SecretedPeptides; nucleotide sequences by Lease and Walker, 2006</td>
+                        <td style="text-align: center"><button><a href="static/datasets/LW_nucl.fasta" download=""><span class="glyphicon glyphicon-download-alt"></span></a></button></td>
+                    </tr>
+                    <tr>
+                        <td>mi_peptides.fasta</td>
+                        <td>miPEPs; peptides sequences by Lauressergues et al, 2015</td>
+                        <td style="text-align: center"><button><a href="static/datasets/mi_peptides.fasta" download=""><span class="glyphicon glyphicon-download-alt"></span></a></button></td>
+                    </tr>
+                    <tr>
+                        <td>NCBI_peptides.fasta</td>
+                        <td>Peptides from NCBI annotation</td>
+                        <td style="text-align: center"><button><a href="static/datasets/NCBI_peptides.fasta" download=""><span class="glyphicon glyphicon-download-alt"></span></a></button></td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div align = "center" id="footer" class="footer">
+                    <p>Copyright &#169; <a href="http://cbb.sjtu.edu.cn/~jingli/">Jing Li's group</a>,
+                    SJTU. All rights reserved.</p>
+              </div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+            <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script src="/static/bootstrap-table/bootstrap-table.min.js"></script>
+</body>
+</html>

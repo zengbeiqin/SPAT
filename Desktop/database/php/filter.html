@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>SPAT</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Description" lang="en" content="ADD SITE DESCRIPTION">
+        <meta name="author" content="ADD AUTHOR INFORMATION">
+        <meta name="robots" content="index, follow">
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">-->
+    <!-- required for dropdown menu on navigation toolbar-->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+
+        <!-- Bootstrap Core CSS file -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="static/bootstrap-table/bootstrap-table.min.css">
+        <!-- Override CSS file - add your own CSS rules -->
+        <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+            <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <!--<div class="navbar-header">-->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="home.html"><b><font color=#0089A7>SPAT</font></b></a>
+                <!--</div> -->
+                <!-- /.navbar-header -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="home.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                    <li><a href="search.html"><span class="glyphicon glyphicon-search"></span> Search</a></li>
+                    <li><a href="aboutus.html">About us</a></li>
+                    <li><a href="help.html">Help</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </nav>
+ <!-- /.navbar -->
+<!-- Page Content -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <!-- Page content 1 -->
+            <div class="container" style="width:100%">
+                <br>
+<!--                 <div>
+                    <h2>Search with Parameters:</h2>
+                    <p>Maximum Length:</p>
+                    <p>Minimum Length:</p>
+                    <p>Chromosome at:</p>
+                    <p>Signal Sequence:</p>
+                    <p>Protein existence:</p> -->
+                </div>
+                <p><b>Download(CSV)</b><a href="{% url 'downloadCSV' %}"><span class="glyphicon glyphicon-download-alt" style="margin-left: 1%"></span></a></p>
+                <table class="table table-striped table-bordered" style="table-layout:fixed;word-break:break-all; word-wrap:break-all;font-family: Arial">     
+                <thead>　　　　　　　　　　　　　　　　
+                    <tr>　　　　
+                        <th style="width:20%">ID</th>　　　　　　　　　　
+                        <th style="width:70%">Peptide Sequence</th>
+                        <th style="width:10% ">Length</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in seqs %}
+                        <tr>
+                            <td><a href="../getseq/{{ item.ID }}">{{ item.mipep_id }}</a></td>
+                            <td>{{ item.pep_seq }}</td>
+                            <td>{{ item.seq_len }}</td>
+                            <!-- <td>{{ customer.customer_note|truncatechars:30}}</td>　　　＃｜truncatechars:30 默认在页面只显示30个字节 -->
+                        </tr>
+                    {% endfor %}
+                </tbody>
+                </table>
+
+
+                <div id="pages" class="text-center" >
+                    <nav>
+                        <ul class="pagination">
+                            <li class="step-links">
+                            {% if seqs.has_previous %}
+                                <a class="active" href="{{ path }}&page={{ seqs.previous_page_number }}">Previous</a>
+                            {% endif %}
+
+                            <span class="current">
+                                Page {{ seqs.number }} of {{ seqs.paginator.num_pages }}</span>
+
+                            {% if seqs.has_next %}
+                                <a class="active" href="{{ path }}&page={{ seqs.next_page_number }}">Next</a>
+                            {% endif %}
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div align = "center" id="footer" class="footer">
+                    <p>Copyright &#169; <a href="http://cbb.sjtu.edu.cn/~jingli/">Jing Li's group</a>,
+                    SJTU. All rights reserved.</p>
+              </div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+            <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script src="static/bootstrap-table/bootstrap-table.min.js"></script>
+</body>
+</html>
